@@ -29,3 +29,24 @@ def get_hit_count():
 def hello():
     count = get_hit_count()
     return 'Hello World! I have been seen {} times.\n'.format(count)
+
+@app.route('/test')
+def test():
+    return 'fonctionne'
+
+@app.route('/predict', methods=['GET'])
+def predict():
+    clf = load('ml/model.joblib')
+    columns = ['sex', 'Age', 'Married', 'Number_children', 'education_level', 'total_members', 'gained_asset',
+               'durable_asset', 'save_asset',
+               'living_expenses', 'other_expenses', 'incoming_salary', 'incoming_own_farm', 'incoming_business',
+               'incoming_no_business', 'incoming_agricultural', 'farm_expenses',
+               'labor_primary', 'lasting_investment', 'depressed']
+    depress = 'no'
+
+    return 'hello world'
+
+if __name__ == '__main__':
+     clf = joblib.load('model.pkl')
+     model_columns = joblib.load('model_columns.pkl')
+     app.run(port=8080)
