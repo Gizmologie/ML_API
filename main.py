@@ -1,5 +1,6 @@
 #source : https://towardsdatascience.com/a-flask-api-for-serving-scikit-learn-models-c8bcdaa41daa
 #source : https://stackoverflow.com/questions/49480243/how-to-load-a-pickle-file-containing-scikit-learn-model-in-a-flask-application
+#sources : https://docs.docker.com/compose/gettingstarted/
 
 from flask import Flask, jsonify
 from sklearn.externals import joblib
